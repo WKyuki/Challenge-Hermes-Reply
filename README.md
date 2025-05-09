@@ -38,5 +38,5 @@ Ao final a solução irá disponibilizar um software capaz de realizar a prediç
 5. Modelo de IA preditivo.
 
 
-[Diagrama chalenge.pdf](https://github.com/user-attachments/files/20113233/Diagrama.chalenge.pdf)
+[Diagrama challenge.pdf](https://github.com/user-attachments/files/20113233/Diagrama.chalenge.pdf)
 
