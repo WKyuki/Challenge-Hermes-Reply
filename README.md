@@ -2,6 +2,21 @@
 
 ## FIAP CHALLENGE SMART MAINTENANCE SaaS
 
+## 👨‍🎓 Integrantes: 
+- Yuki Watanabe Kuramoto
+- Ricardo Batah Leone
+- Cayo Henrique Gomes do Amaral
+- Guilherme Martins Ventura Vieira Romeiro
+- Rodrigo de Melo Reinaux Porto
+
+## 👩‍🏫 Professores:
+### Tutor(a) 
+- Lucas Gomes Moreira
+### Coordenador(a)
+- André Godoi
+
+## Entregáveis
+
 ### Proposta de metodologia
 A solução irá coletar dados de cada um dos principais parâmetros de funcionamento dos equipamentos (incluindo, mas não se limitando a: vibração, temperatura, som, alinhamento, nível de óleo) para avaliação da condição de operação das máquinas. 
 
