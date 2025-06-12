@@ -55,3 +55,68 @@ Ao final a solução irá disponibilizar um software capaz de realizar a prediç
 
 [Diagrama challenge.pdf](https://github.com/user-attachments/files/20113233/Diagrama.chalenge.pdf)
 
+
+## SPRINT 2 - FIAP CHALLENGE SMART MAINTENANCE SaaS
+
+## Visão Geral 
+
+Este projeto, parte do FIAP Challenge Smart Maintenance SaaS, foca no monitoramento de parâmetros essenciais para prever falhas em máquinas industriais. A medição da temperatura foi escolhida como parâmetro inicial devido à sua ampla aplicabilidade e por ser um indicador precoce de problemas mecânicos, elétricos ou de lubrificação.
+
+O projeto utiliza um sensor MPU6050, que integra medição de temperatura, giroscópio e acelerômetro. Essa escolha permite uma futura expansão do projeto para incluir outras medições sem um aumento significativo de custos.
+
+## Componentes Utilizados
+
+* **ESP32:** Microcontrolador.
+* **MPU6050:** Sensor de temperatura, giroscópio e acelerômetro.
+
+## Esquema do Circuito
+
+O circuito foi montado e simulado utilizando a plataforma WOKWI. O ESP32 está conectado ao sensor MPU6050 conforme o diagrama abaixo:
+
+![Esquema do Circuito](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/circuito.png?raw=true)
+
+
+## Cenário Simulado
+
+Para a simulação, optou-se por monitorar o funcionamento de uma máquina industrial durante um período determinado, realizando uma medição por segundo, totalizando até 370 medições.
+
+Nesse cenário, a máquina inicia suas operações e atinge uma temperatura máxima, mantendo esse nível por aproximadamente 10 segundos até o final da medição.
+
+Em lugar do painel de controle do sensor na plataforma de simulação a geração das as variações de temperatura, foi feita a partir de uma _array_ de dados pré-carregados no código. Essa abordagem simulou a uniformidade dos intervalos de medição de um sensor real.
+
+Após as medições, os dados são compilados para exportação em um arquivo CSV, processo simulado pela impressão dos dados lidos peo sensor no monitor serial.
+
+### Funcionamento da Simulação no WOKWI
+
+#### Início da Simulação:
+
+A simulação é iniciada no WOKWI Simulator, exibindo o boot do ESP32 e a solicitação de entrada para o tempo de leitura.
+
+![Início da Simulação](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/simulacao_inicio.png?raw=true)
+
+
+#### Leitura dos Dados Sintéticos de Temperatura:
+
+Durante a simulação, o sistema realiza as leituras dos dados de temperatura sintéticos (pré-carregados), exibindo o tempo e a temperatura correspondente no terminal. [cite_start]O total de amostras sintéticas disponíveis é de 370.
+
+![Leitura dos Dados](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/simulacao_leitura.png?raw=true)
+
+
+#### Exportação das Leituras para Arquivo CSV:
+
+Ao final das medições, os dados são "exportados" para um arquivo CSV. [cite_start]Essa exportação é simulada pela impressão contínua dos valores de temperatura no monitor serial até o fim do processo.
+
+![Exportação CSV](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/simulacao_exportacao.png?raw=true)
+
+
+## Gráfico:
+
+Para a análise dos dados, as leituras apresentadas no monitor serial foram salvas em um arquivo CSV. [cite_start]Posteriormente, esses dados foram importados para o RStudio, onde um gráfico de evolução da temperatura foi produzido.
+
+O gráfico demonstra claramente a tendência de aquecimento da máquina. [cite_start]A linha tracejada vermelha representa a temperatura média de operação, que é de 80.21 °C. A elevada temperatura média de operação indica uma tendência ao sobreaquecimento da máquina.
+
+![Gráfico de Evolução da Temperatura](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/grafico_temperatura.png?raw=true)
+
+
+
+
