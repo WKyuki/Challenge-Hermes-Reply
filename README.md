@@ -73,7 +73,7 @@ O projeto utiliza um sensor MPU6050, que integra medição de temperatura, giros
 
 O circuito foi montado e simulado utilizando a plataforma WOKWI. O ESP32 está conectado ao sensor MPU6050 conforme o diagrama abaixo:
 
-![Esquema do Circuito](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/circuito.png?raw=true)
+![Esquema do Circuito](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/8dd52aed3ab7197536cc4571f0dcdd775e054121/assets/esquema_circuito.png)
 
 
 ## Cenário Simulado
@@ -92,30 +92,32 @@ Após as medições, os dados são compilados para exportação em um arquivo CS
 
 A simulação é iniciada no WOKWI Simulator, exibindo o boot do ESP32 e a solicitação de entrada para o tempo de leitura.
 
-![Início da Simulação](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/simulacao_inicio.png?raw=true)
+![Início da Simulação](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/8dd52aed3ab7197536cc4571f0dcdd775e054121/assets/inicio_simulacao.png)
 
 
 #### Leitura dos Dados Sintéticos de Temperatura:
 
 Durante a simulação, o sistema realiza as leituras dos dados de temperatura sintéticos (pré-carregados), exibindo o tempo e a temperatura correspondente no terminal. [cite_start]O total de amostras sintéticas disponíveis é de 370.
 
-![Leitura dos Dados](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/simulacao_leitura.png?raw=true)
+![Leitura dos Dados](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/8dd52aed3ab7197536cc4571f0dcdd775e054121/assets/leituras_temperatura.png)
 
 
 #### Exportação das Leituras para Arquivo CSV:
 
-Ao final das medições, os dados são "exportados" para um arquivo CSV. [cite_start]Essa exportação é simulada pela impressão contínua dos valores de temperatura no monitor serial até o fim do processo.
+Ao final das medições, os dados são "exportados" para um arquivo CSV. Essa exportação é simulada pela impressão contínua dos valores de temperatura no monitor serial até o fim do processo.
 
-![Exportação CSV](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/simulacao_exportacao.png?raw=true)
+![Exportação CSV](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/8dd52aed3ab7197536cc4571f0dcdd775e054121/assets/exportacao_dados_lidos.png)
 
+### Código Fonte
+[Código fonte da simulação](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/8dd52aed3ab7197536cc4571f0dcdd775e054121/src/codigo_comentado.txt)
 
 ## Gráfico:
 
-Para a análise dos dados, as leituras apresentadas no monitor serial foram salvas em um arquivo CSV. [cite_start]Posteriormente, esses dados foram importados para o RStudio, onde um gráfico de evolução da temperatura foi produzido.
+Para a análise dos dados, as leituras apresentadas no monitor serial foram salvas em um arquivo CSV. Posteriormente, esses dados foram importados para o RStudio, onde um gráfico de evolução da temperatura foi produzido.
 
-O gráfico demonstra claramente a tendência de aquecimento da máquina. [cite_start]A linha tracejada vermelha representa a temperatura média de operação, que é de 80.21 °C. A elevada temperatura média de operação indica uma tendência ao sobreaquecimento da máquina.
+O gráfico demonstra a tendência de aquecimento da máquina. A linha tracejada vermelha representa a temperatura média de operação, que é de 80.21 °C. A elevada temperatura média de operação indica uma tendência ao sobreaquecimento da máquina.
 
-![Gráfico de Evolução da Temperatura]([https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/grafico_temperatura.png?raw=true](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Rplot01.png))
+![Gráfico de Evolução da Temperatura](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/8dd52aed3ab7197536cc4571f0dcdd775e054121/assets/Rplot01.png)
 
 
 
