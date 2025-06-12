@@ -115,7 +115,7 @@ Para a análise dos dados, as leituras apresentadas no monitor serial foram salv
 
 O gráfico demonstra claramente a tendência de aquecimento da máquina. [cite_start]A linha tracejada vermelha representa a temperatura média de operação, que é de 80.21 °C. A elevada temperatura média de operação indica uma tendência ao sobreaquecimento da máquina.
 
-![Gráfico de Evolução da Temperatura](https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/grafico_temperatura.png?raw=true)
+![Gráfico de Evolução da Temperatura]([https://github.com/SeuUsuario/SeuRepositorio/blob/main/docs/grafico_temperatura.png?raw=true](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Rplot01.png))
 
 
 
