@@ -154,5 +154,5 @@ Inicialmente pensamos em usar um algorítmo de regressão logística, entretanto
 
 [Resultados](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Sprint_3-Resultados_modelos.pdf)
 
-
+[Vídeo explicativo do projeto](https://youtu.be/rZ6tpIjjPuI)
 
