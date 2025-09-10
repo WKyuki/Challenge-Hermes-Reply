@@ -123,27 +123,36 @@ O gráfico demonstra a tendência de aquecimento da máquina. A linha tracejada 
 
 ## Visão Geral 
 
-Nessa terceira fase do projeto foi elaborada a modelagem do banco de dados e a primeira implementação dele, assim como a primeira implementação e primeiro teste do modelo de machine learning.
+Nessa terceira fase do projeto foi elaborada a modelagem do banco de dados, assim como a primeira implementação e primeiro teste do modelo de machine learning.
 
 ## Modelagem do Banco de Dados
 
-O banco de dados foi pensado visando à eficiência e à simplicidade da implementação e da manutenção. Embora seja um banco de dados simples ele se presta ao fornecimento de dados claros sobre os sensores captaram.
+O banco de dados foi pensado visando à eficiência e à simplicidade da implementação e da manutenção. Embora seja um banco de dados simples cumpre o papel de armazenamento dos dados necessários para alimentação do modelo de ML.
 
-A escolha dos atributos de cada tabela foi feita pensando em quais dados iriam ser gravados e quais restri~çoes seriam necessárias para que não fossem realizadas gravações com erro dentro do banco.
+A escolha dos atributos de cada tabela foi feita pensando nos tipos de dados que seriam gravados e quais restrições seriam necessárias para que não fossem realizadas gravações com erros.
 
-Por esta razão, implementou-se restrições que especificam quais tipos de dados poderão ser gravados em cada coluna da tabela.
+Por esta razão, foram implementadas restrições de unicidade de checagem de etrada de dados. De unicidade para garantir que não haveria duplicidade na identificação dos sensores e das máquinas, e para entrada de dados para que não fossem inseridos dados com valor negativo.
+
+![Diagrama Banco de Dados](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Sprint_3-IMG_BD.png)
+
+[Script criação do banco de dados](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Sprint_3-Scripts_criacao_BD.ddl)
+
+[Modelagem Banco de Dados](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Sprint_3-Projeto_modelagem_BD.dmd)
+
 
 ## Modelo de Machine Learning
 
-O modelo foi pensado a partir da análise dos dados disponíveis para treinamento. Isso porque dentro do dataset havia a classificação daquelas maquinárias em que foro identificadas falhas, desse modo já tínhamos os dados rotulados para treinar o modelo. 
+O modelo foi pensado a partir da análise dos dados disponíveis para treinamento. Isso porque dentro do dataset havia a classificação daquelas maquinárias em que foram identificadas falhas, desse modo já estavam disponíveis os dados rotulados para treinar o modelo. 
 
-Uma vez que os dados já possuiam rótu-los, descartou-se o uso de modelos não supervisionados e optou-se pelo uso de um modelo supervisionado de classificação.
+Uma vez que os dados já possuiam rótulos, descartou-se o uso de modelos não supervisionados e optou-se pelo uso de um modelo supervisionado de classificação.
 
-Inicialmente pensamos em usar um modelo de regressão logística, entretanto após realizar o treinamento, o nível de recall do modelo nos pareceu muito baixo, de modo que se descartou seu uso em favor de usar o KNN. Após o treinamento e o teste do modelo com usando o KNN aumentou o nível de recall, Assim como o f1-score, resultando no dobro de previsões de falha corretas. Por esta razão se optou pelo uso do modelo com KNN.
+Inicialmente pensamos em usar um algorítmo de regressão logística, entretanto após realizar o treinamento, o nível de recall foi abaixo do esperado, de modo que se descartou seu uso em favor de usar o KNN. Após o treinamento e o teste do modelo com usando o KNN aumentou o nível de recall, assim como o f1-score, resultando no dobro de previsões de falha corretas. Por esta razão se optou pelo uso do KNN.
 
+[Dataset](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Sprint_3-Dataset_maquinas_ind.csv)
 
-![Esquema do Circuito](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/8dd52aed3ab7197536cc4571f0dcdd775e054121/assets/esquema_circuito.png)
+[Código Fonte](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Sprint_3-CodigoFonte_modelo_ML.ipynb)
 
+[Resultados](https://github.com/WKyuki/Challenge-Hermes-Reply/blob/main/assets/Sprint_3-Resultados_modelos.pdf)
 
 
 
