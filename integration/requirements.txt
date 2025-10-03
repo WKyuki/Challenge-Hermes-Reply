@@ -1,0 +1,87 @@
+# Smart Maintenance SaaS - Requirements
+# ===================================
+
+# Core Data Science Libraries
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+scipy>=1.10.0
+
+# Database Libraries
+cx_Oracle>=8.3.0
+SQLAlchemy>=2.0.0
+psycopg2-binary>=2.9.0  # Para PostgreSQL como alternativa
+
+# MQTT and IoT
+paho-mqtt>=1.6.0
+pycrypto>=2.6.1
+
+# Machine Learning and Analysis
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+joblib>=1.3.0
+
+# Web Framework (Dashboard)
+streamlit>=1.28.0
+altair>=5.0.0
+bokeh>=3.2.0
+
+# Utilities
+python-dotenv>=1.0.0
+schedule>=1.2.0
+click>=8.1.0
+tqdm>=4.65.0
+requests>=2.31.0
+
+# Development and Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Logging and Monitoring
+structlog>=23.1.0
+prometheus-client>=0.17.0
+
+# Email and Notifications
+# smtplib-ssl>=1.0.0  # Built-in Python module
+twilio>=8.5.0  # Para SMS alerts (opcional)
+
+# Configuration and Environment
+pyyaml>=6.0
+toml>=0.10.2
+configparser>=6.0.0
+
+# Data Validation
+pydantic>=2.0.0
+cerberus>=1.3.4
+
+# Time Series Analysis
+statsmodels>=0.14.0
+prophet>=1.1.4  # Para forecasting avançado
+
+# Serialization
+pickle5>=0.0.12
+cloudpickle>=2.2.1
+
+# API Development (para futuras integrações)
+fastapi>=0.100.0
+uvicorn>=0.23.0
+httpx>=0.24.0
+
+# Excel/CSV Processing
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
+
+# Image Processing (para futuras features)
+Pillow>=10.0.0
+
+# Async Processing
+# asyncio>=3.11.0  # Built-in Python module
+aiofiles>=23.1.0
+
+# Memory and Performance
+psutil>=5.9.0
+memory-profiler>=0.61.0
